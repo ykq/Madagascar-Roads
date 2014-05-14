@@ -34,13 +34,21 @@ A lot of raw, geospatial satellite data needed on land suitability, availability
 The program starts out by splitting the land into a grid of 10 km x 10km cells – for example, the continent of Africa comes out to roughly 450,000 cells – that are the basis for analysis. The program will start by identify land that is suitable and available for growing crops but also resilient to climate change. And because infrastructure connectivity has a significant impact on agricultural productivity, it will then use network optimization algorithms to minimize infrastructure cost. Finally, it will optimize the land’s probable agricultural productivity and identify which pieces of land the government should develop first and where it should build roads. In order of operation: 
 
 •	Identify whether land is suitable for agriculture (and for which crops);
+
 •	Identify whether suitable land it is available or currently in use;
+
 •	Impute an index for each piece of land that captures relative favorability for development (as a function of suitability and availability);
+
 •	Impute an index of land resilience to climate change that captures relative favorability under different climate change conditions; 
+
 •	Find the optimal path using existing roads from each cell to the nearest city; 
+
 •	If the undeveloped land isn’t connected to the existing road network, find the lowest cost connecting road you can construct by modeling location-specific construction costs based on slope, soil bulk weight, soil type, etc.;
+
 •	Find the optimal aggregate (existing and to be built) path from each piece of land to the nearest city;
+
 •	Impute a development index of infrastructure cost and estimated agricultural productivity for each land cell, and order them in a descending array;
+
 •	‘Activate’ each parcel of land starting from the top of the array, aggregating the total estimated agricultural production (in terms of calories) and total infrastructure costs until you reach the upper bound of the projected number of calories demanded annually by the population of Africa in 2050.
 
 The final product is a list of all the existing roads to be expanded, new roads to be built, available land to be developed and crops to be grown. If implemented using Processing or C# / Visual Basic, the recommendations could also be dynamically visualized on a base map of the entire country or continent.
