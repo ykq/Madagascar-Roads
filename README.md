@@ -51,4 +51,4 @@ The program starts out by splitting the land into a grid of 10 km x 10km cells �
 
 •	‘Activate’ each parcel of land starting from the top of the array, aggregating the total estimated agricultural production (in terms of calories) and total infrastructure costs until you reach the upper bound of the projected number of calories demanded annually by the population of Africa in 2050.
 
-The final product is a list of all the existing roads to be expanded, new roads to be built, available land to be developed and crops to be grown. If implemented using Processing or C# / Visual Basic, the recommendations could also be dynamically visualized on a base map of the entire country or continent.
+The final product is a list of all the existing roads to be expanded, new roads to be built, available land to be developed and crops to be grown. Implemented using Processing or C# / Visual Basic, the recommendations could also be dynamically visualized on a base map of the entire country or continent.
